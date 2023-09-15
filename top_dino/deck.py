@@ -37,4 +37,14 @@ def generate_deck() -> list[dict]:
 
 def split_deck(deck:list[dict]):
     random.shuffle(deck)
+    half_deck = len(deck) // 2 #divisoes de deck, duas barras retorna divisao inteira, uma retorna float
+    print(half_deck)
+
+    p1_deck = deck[:half_deck] #criando slice do começo ate a metade, embaixo da metade ate o fim
+    p2_deck = deck[half_deck:] #slice nas listas, indicando primeiro indice e ultimo que deve ser feito o slice
     
+    return p1_deck, p2_deck
+
+def get_random(card: dict) -> str:
+    card_keys = [key for key in card.keys() if key != "name"] #primeiro key faz papel de append na lista
+    return random.choice(p1_card)
