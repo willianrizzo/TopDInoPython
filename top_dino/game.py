@@ -6,4 +6,6 @@ def play() -> None:
     print(dino_deck)
 
     #2. embaralhar as cartas
+    p1_deck = split_deck(dino_deck)
+
     #3. gerar relatiorio de batalha
